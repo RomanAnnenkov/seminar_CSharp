@@ -10,8 +10,7 @@
 
 int ThirdDigitOfPositiveNumber(int num)
 {
-    if (num >= 0 && num < 100) return -1;
-    else
+    if (num > 99)
     {
         while (num > 999)
         {
@@ -19,6 +18,7 @@ int ThirdDigitOfPositiveNumber(int num)
         }
         return num % 10;
     }
+    else return -1;
 }
 
 Console.Write("Введите число : ");
