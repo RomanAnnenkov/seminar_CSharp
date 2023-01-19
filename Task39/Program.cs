@@ -9,7 +9,23 @@ PrintArray(array);
 ReverseArray(array);
 //Array.Reverse(array);
 PrintArray(array);
+ReverseArrayVersion2(array);
+PrintArray(array);
 
+void ReverseArrayVersion2(int[] array)
+{
+    int index1 = 0;
+    int index2 = array.Length - 1;
+
+    while (index1 < index2)
+    {
+        int obj = array[index1];
+        array[index1] = array[index2];
+        array[index2] = obj;
+        index1++;
+        index2--;
+    }
+}
 
 void ReverseArray(int[] arr)
 {
