@@ -15,13 +15,11 @@ Console.WriteLine(convertDecimalToBinary);
 int ConvertDecimalToBinary(int num)
 {
     int result = 0;
-    int ostatok = 0;
     int multiplyer = 1;
 
-    while(num != 0)
-    {   
-        ostatok = num%2;
-        result = result + ostatok * multiplyer;
+    while (num != 0)
+    {
+        result = result + num % 2 * multiplyer;
         num = num / 2;
         multiplyer *= 10;
 
