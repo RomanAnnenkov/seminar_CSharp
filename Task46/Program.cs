@@ -6,18 +6,18 @@ m = 3, n = 4.
 77  3   8   1
 */
 
-int[,] array2d = CreateMatrixRndInt(3,4,-5,40);
+int[,] array2d = CreateMatrixRndInt(3, 4, -5, 40);
 PrintMatrix(array2d);
 
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
-    int[,] newMatrix = new int[rows,columns];
+    int[,] newMatrix = new int[rows, columns];
     var rnd = new Random();
     for (int i = 0; i < newMatrix.GetLength(0); i++)
     {
         for (int j = 0; j < newMatrix.GetLength(1); j++)
         {
-            newMatrix[i,j] = rnd.Next(min, max + 1);
+            newMatrix[i, j] = rnd.Next(min, max + 1);
         }
     }
     return newMatrix;
@@ -29,7 +29,7 @@ void PrintMatrix(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i,j],4}");
+            Console.Write($"{matrix[i, j],4}");
         }
         Console.WriteLine();
     }
