@@ -20,7 +20,7 @@ int columnIndex = columnNumber - 1;
 bool isElementExist = IsElementExist(array2d, rowIndex, columnIndex);
 if (isElementExist)
 {
-    Console.WriteLine($"{rowNumber},{columnNumber} -> {array2d[rowIndex,columnIndex]}");
+    Console.WriteLine($"{rowNumber},{columnNumber} -> {array2d[rowIndex, columnIndex]}");
 }
 else
 {
@@ -33,9 +33,9 @@ PrintMatrix(array2d);
 
 bool IsElementExist(int[,] arr, int indexOfRow, int indexOfColumn)
 {
-    if (indexOfRow >= 0 
+    if (indexOfRow >= 0
         && indexOfRow < arr.GetLength(0)
-        && indexOfColumn >= 0 
+        && indexOfColumn >= 0
         && indexOfColumn < arr.GetLength(1)) return true;
     return false;
 }
