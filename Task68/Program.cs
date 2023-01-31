@@ -16,6 +16,6 @@ else Console.WriteLine("Ошибка ввода.");
 int GetAkkermanNumber(int numM, int numN)
 {
     if (numM == 0) return numN + 1;
-    else if (numN == 0) return GetAkkermanNumber(numM - 1, 1);
-    else return GetAkkermanNumber(numM - 1, GetAkkermanNumber(numM, numN - 1));
+    if (numN == 0) return GetAkkermanNumber(numM - 1, 1);
+    return GetAkkermanNumber(numM - 1, GetAkkermanNumber(numM, numN - 1));
 }
